@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <script src="https://static.zohocdn.com/zohocrm/v2.0/sdk/3.0.0/sdk.js"></script>
+  <script src="https://live.zwidgets.com/js-sdk/1.2/ZohoEmbededAppSDK.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/func.js"></script>
+  <script src="assets/js/sweetalert.min.js"></script>
+  <title>חיוב</title>
+  
+  
+
+  <style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        overflow: scroll;
+    }
+
+    h2 {
+        color: #333;
+    }
+
+    .options-table {
+        margin-top: 20px;
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    .options-table th, .options-table td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: right;
+    }
+
+    .options-table th {
+        background-color: #f2f2f2;
+    }
+
+    .button-group {
+        margin-top: 10px;
+        width: 40%;
+    }
+
+    .button-group button {
+        padding: 8px 16px;
+  background-color: #0289fb;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 4px;
+        width: 40%;
+    }
+
+    .button-group button:hover {
+        background-color: #0e60a3;
+    }
+</style>
+</head>
+<body>
+    <span class="loader-container"></span>
+  
+    <div class="container" id="prod_div">
+        <h2>תנאי אישור חיתום</h2>
+        <table  class="options-table" id="prod_table" >
+            <thead  ">
+                <tr>
+                    <th>בחירה</th>              
+                    <th>מוצר</th>        
+                    <th>סטטוס</th>
+                    
+                </tr>
+            </thead>
+            <tbody id="prod_tbody">
+               
+                
+            </tbody>
+
+        </table>
+        <div class="button-group" id="prod_button-group">
+            <button class="button button-primary" id="prod_selectButton" name="prod_selectButton">המשך</button>
+            <button class="button button-primary" id="prod_cancelButton" name="prod_cancelButton">ביטול</button>
+        </div>
+
+    </div>
+  
+  
+    <div class="container"  id="second_div" hidden="true" >
+   
+      <h2>תנאי אישור חיתום</h2>
+      
+      <table class="options-table" style="position: sticky; top: 20px; background-color: #fff;">
+        <thead>
+            <tr id="deposit">
+                
+            </tr>
+        </thead>
+      </table>
+      <table class="options-table" id="table">
+          <thead style="position: sticky; top: 60px; ">
+              <tr>              
+                  <th>ערבויות</th>
+                  <th>איך משלם</th>
+                  <th>תפקיד</th>
+                  <th>שם מלא</th>
+              </tr>
+          </thead>
+          <tbody id="tbody">
+             
+              
+          </tbody>
+      </table>
+      <table class="options-table" id="together_apart_table">
+        <thead>
+            <tr id="together_apart">
+                
+            </tr>
+        </thead>
+      </table>
+      <table class="options-table" id="next_table" >
+
+      </table>
+
+      <div class="button-group" id="button-group">
+          <button class="button button-primary" id="selectButton" name="selectButton">הבא</button>
+          <button class="button button-primary" id="cancelButton" name="cancelButton">ביטול</button>
+      </div>
+  </div>
+
+</body>
+
+
+</html>
